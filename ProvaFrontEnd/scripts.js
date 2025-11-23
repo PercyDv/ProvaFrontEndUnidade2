@@ -1,4 +1,3 @@
-// 1º - parte do menu hamburguer.
 document.addEventListener('DOMContentLoaded', function() {
 
     const hamburguer = document.querySelector('.hamburguer');
@@ -8,11 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         menuLista.classList.toggle('responsivo');
-        console.log('Menu hamburguer clicado!');
+        console.log('Menu selecionado!');
     });
 });
 
-// 2º - parte do slide de imagens
 let slideIndex = 0;
 
 function mostrarSlides() {
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     mostrarSlides();
 });
 
-// 3º - pausa no vídeo
 document.addEventListener('DOMContentLoaded', function(){
     const video = document.getElementById('myVideo');
     const botaoPause = document.getElementById('myBtn');
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-// 4º - formulário
 document.addEventListener('DOMContentLoaded', function(){
     const form = document.querySelector('form');
     const name = document.getElementById('name');
@@ -66,18 +62,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if(name.value.trim()===''){
             alert('Por favor, preencha o nome!');
-            return console.log('Erro de nome vazio.');
+            return console.log('Nome vazio');
         } else if(surname.value.trim()===''){
-            alert('Por favor, preencha o sobrenome!');
-            return console.log('Erro de sobrenome vazio.');
+            alert('Por gentileza, preencha o sobrenome!');
+            return console.log('Sobrenome vazio.');
         } else if(!email.value.includes('@') || !email.value.includes('.')){
-            alert('Por favor, use um e-mail válido!');  
-            return console.log('e-mail inválido');
+            alert('Por gentileza, use um e-mail válido!');  
+            return console.log('E-mail inválido');
         } else if(message.value.trim()===''){
             alert('Por favor, adicione uma mensagem!');
             return console.log('mensagem não preenchida')
         } else {
-            alert('formulário enviado.');
+            alert('Formulário enviado.');
             form.reset(); 
         }
     })
